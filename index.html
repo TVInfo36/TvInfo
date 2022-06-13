@@ -1,12 +1,10 @@
 <!-- 
-  ____          ____    __  
- |  _ \        |___ \  / /  
- | |_) |_   _    __) |/ /_  
- |  _ <| | | |  |__ <| '_ \ 
- | |_) | |_| |  ___) | (_) |
- |____/ \__, | |____/ \___/ 
-         __/ |              
-        |___/    
+░█████╗░██████╗░███████╗░█████╗░████████╗███████╗██████╗░  ██████╗░██╗░░░██╗  ██████╗░░█████╗░
+██╔══██╗██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗  ██╔══██╗╚██╗░██╔╝  ╚════██╗██╔═══╝░
+██║░░╚═╝██████╔╝█████╗░░███████║░░░██║░░░█████╗░░██║░░██║  ██████╦╝░╚████╔╝░  ░█████╔╝██████╗░
+██║░░██╗██╔══██╗██╔══╝░░██╔══██║░░░██║░░░██╔══╝░░██║░░██║  ██╔══██╗░░╚██╔╝░░  ░╚═══██╗██╔══██╗
+╚█████╔╝██║░░██║███████╗██║░░██║░░░██║░░░███████╗██████╔╝  ██████╦╝░░░██║░░░  ██████╔╝╚█████╔╝
+░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚══════╝╚═════╝░  ╚═════╝░░░░╚═╝░░░  ╚═════╝░░╚════╝░
 36 is Yorick's creation of greatness and goodness
 -->
 
@@ -86,7 +84,7 @@
   
       <div class="row g-5">
         <div class="">
-          <h4 class="mb-3">information</h4>
+          <h4 class="mb-3">Information</h4>
           <form class="needs-validation" id="MainForm" novalidate>
             <div class="row g-3">
               
@@ -159,7 +157,6 @@
       <ul class="list-inline">
         <li class="list-inline-item"><a href="/">Home</a></li>
         <li class="list-inline-item"><a href="https://discord.gg/ccztMsc4SK">Discord</a></li>
-        <li class="list-inline-item"><a href="#">Support</a></li>
       </ul>
     </footer>
   </div>
@@ -170,16 +167,26 @@
 
    <script>
     console.log(`
-  ____          ____    __  
- |  _ \        |___ \  / /  
- | |_) |_   _    __) |/ /_  
- |  _ <| | | |  |__ <| '_ \ 
- | |_) | |_| |  ___) | (_) |
- |____/ \__, | |____/ \___/ 
-         __/ |              
-        |___/    
-36 is Yorick's creation of greatness and goodness
-    `) //uwu
+░█████╗░██████╗░███████╗░█████╗░████████╗███████╗██████╗░  ██████╗░██╗░░░██╗  ██████╗░░█████╗░
+██╔══██╗██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗  ██╔══██╗╚██╗░██╔╝  ╚════██╗██╔═══╝░
+██║░░╚═╝██████╔╝█████╗░░███████║░░░██║░░░█████╗░░██║░░██║  ██████╦╝░╚████╔╝░  ░█████╔╝██████╗░
+██║░░██╗██╔══██╗██╔══╝░░██╔══██║░░░██║░░░██╔══╝░░██║░░██║  ██╔══██╗░░╚██╔╝░░  ░╚═══██╗██╔══██╗
+╚█████╔╝██║░░██║███████╗██║░░██║░░░██║░░░███████╗██████╔╝  ██████╦╝░░░██║░░░  ██████╔╝╚█████╔╝
+░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚══════╝╚═════╝░  ╚═════╝░░░░╚═╝░░░  ╚═════╝░░╚════╝░
+36 is Yorick's creation of greatness and goodness`) //uwu
+
+    function getCookie(name) {
+      let cookie = {};
+      document.cookie.split(';').forEach(function(el) {
+      let [key,value] = el.split('=');
+        cookie[key.trim()] = value;
+      })
+       return cookie[name];
+    }
+
+    function setCookie(name, value) {
+      document.cookie = name + "=" + value
+    }
 
     var maxAge = {
       "samsung": 10,
@@ -267,7 +274,7 @@
     }
     
     for (i = 0; i < FourHourTest.length; i++) {
-      $("#4Hours").append("<option value=\""+i+"\">"+FourHourTest[i]+"</option>")
+      $("#4Hours").append("<option value=\""+i+"\">"+FourHourTest[i]+"</option>ss")
     }
     for (i = 0; i < visualTest.length; i++) {
       $("#Visual").append("<option value=\""+i+"\">"+visualTest[i]+"</option>")
@@ -279,6 +286,14 @@
     $('#SerialError').hide()
     $('#VisualError').hide()
     $('#4HourError').hide()
+
+    $('#Brand').on('change', function() {
+      setCookie("Brand", $('#Brand').val())
+    });
+
+    if (getCookie("Brand") != null && getCookie("Brand") != "") {
+      $("#Brand").val(getCookie("Brand")).change();
+    }
   </script>
 </body>
 </html>
