@@ -294,6 +294,46 @@
     if (getCookie("Brand") != null && getCookie("Brand") != "") {
       $("#Brand").val(getCookie("Brand")).change();
     }
+
+    $('#BuildYear').on('change', function() {
+      setCookie("BuildYear", $('#BuildYear').val())
+    });
+
+    if (getCookie("BuildYear") != null && getCookie("BuildYear") != "") {
+      $("#BuildYear").val(getCookie("BuildYear")).change();
+    }
+
+    $('#Model').on('change', function() {
+      setCookie("Model", $('#Model').val())
+    });
+
+    if (getCookie("Model") != null && getCookie("Model") != "") {
+      $("#Model").val(getCookie("Model")).change();
+    }
+
+    $('#Serial').on('change', function() {
+      setCookie("Serial", $('#Serial').val())
+    });
+
+    if (getCookie("Serial") != null && getCookie("Serial") != "") {
+      $("#Serial").val(getCookie("Serial")).change();
+    }
+
+    $('#Visual').on('change', function() {
+      setCookie("Visual", $('#Visual').val())
+    });
+
+    if (getCookie("Visual") != null && getCookie("Visual") != "") {
+      $("#Visual").val(getCookie("Visual")).change();
+    }
+
+    $('#4Hours').on('change', function() {
+      setCookie("4Hours", $('#4Hours').val())
+    });
+
+    if (getCookie("4Hours") != null && getCookie("4Hours") != "") {
+      $("#4Hours").val(getCookie("4Hours")).change();
+    }
   </script>
 </body>
 </html>
